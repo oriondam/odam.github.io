@@ -179,6 +179,36 @@
         </div>
 
       </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+      <body>
+        <canvas id="FactChart" style="width:100%;max-width:700px"></canvas>
+
+        <script>
+            var xValues = ["2018", "2019", "2020", "2021", "2022"];
+            var yValues = [37, 51, 76, 30, 9];
+            var barColors = ["purple", "brown","yellow","blue","red"];
+            
+            new Chart("myChart", {
+              type: "bar",
+              data: {
+                labels: xValues,
+                datasets: [{
+                  backgroundColor: barColors,
+                  data: yValues
+                }]
+              },
+              options: {
+                legend: {display: false},
+                title: {
+                  display: true,
+                  text: "Books Read Per Year 2018-2022"
+                }
+              }
+            });
+            </script>
+
+      </body>
+        
     </section><!-- End Facts Section -->
 
     <!-- ======= Skills Section ======= -->
