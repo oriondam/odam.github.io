@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 3: Accessibility Testing</title>
+    <link href="/assets/css/style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container"> 
+<h1>Accessibility Testing for Santa Clara County Library Disctrict (SCCLD)</h1>
+
+<p>
+    Name: Orion Dam <br>
+    Assignment: Accessibility Testing <br>
+    Website: <a href="https://sccld.org">Santa Clara County Library District </a>  <br>
+    Date: Feb 11, 2023
+</p>
+
+<p>Hello, I hope this messages reaches you in high spirits! I'm Orion Dam, a student at the University of Denver's Master's in Library and Information Sciences program. In my Web Content Management class, we are in the process of learning about how necessary digitical accessibility is for people who use assistive technologies to naviagte the internet on either their computers or mobile devices, and since I frequent your libraries so often, I decided to take an in depth look at the library system's website.</p>
+
+<p>The following review of the Santa Clara County Library District (SCCLD) website uses criteria from the <a href="https://www.w3.org/WAI/test-evaluate/preliminary/">W3C WAI Easy Checks – A First Review of Web Accessibility</a> guide for its findings. I hope this report comes across as helpful; I have nothing but love for SCCLD as a patron since my early childhood days, from coming to storytime as a toddler to doing homework at Campbell library during my high school years, and even to frequently borriwng materials now in my adult life. Thank you so much for your time. </p>
+
+<h2>Accessibility Checklist</h2>
+<h3>Website Page Titles</h3>
+
+<p>After viewing your source code, it is good to see that your < title > tag is within the < head > tag. Titles are important as they are the first things that screen readers pick up and say when users switch between different web pages. They also are integral for orientation as users with many tabs open may need to navigate between different pages as well.</p>
+
+<p>Furthermore, after accessing a few different web pages from your home page, I can safely say that your titles highlight the content on the immediate page as opposed to putting the organization's name first, which adequately summarizes the page's content as well as distinguishing it from other pages.</p>
+
+<!-- green success class -->
+<p class="alert alert-success" role="alert">Results: <i class="bi bi-hand-thumbs-up-fill"></i> 8 pages on the SCCLD website were evaluated for clear, unique HTML page titles. Each page has descriptive HTML title values. Each page also follows the format of "Current Page Content | Santa Clara County Library | Bibliocommons."" </p>
+
+<h3>Image Text Alternatives</h3>
+<p>If an image cannot load for whatever reason, image text alternatives are usually presented in lieu of the image itself. Screen readers also read the image text alternatives so it is vital to have alt text on images for the previous reasons.</p>
+<p class="alert alert-danger" role="alert">Results: <i class="bi bi-hand-thumbs-down-fill"></i> Only one image on the home page has alt text for it (the Santa Clara Library District logo). After looking at a few other pages as well, Bestsellers, Kids and Families, and the Online Library home page, I reached the same conclusion: that the only image with alt text on it was the logo itself. We recommend all photos to have alt text in order for patrons who use the website to know what each image is of and where it leads to.</p>
+
+
+<h3>Text:</h3>
+ Headings, Contrast Ratio ("color contrast") and Resizing Text are all tools that support navigation of the page in addition to remaining aesthetically pleasing.
+
+<p class="alert alert-success" role="alert">Results - Headings  <i class="bi bi-hand-thumbs-up-fill"></i> 
+After looking at the home page, the online library home page, kids and families, and bestsellers, we found that each page had only one h1 tag, which checks out as each page should ever only have one h1 tag so screen readers would know the hierarchy of the page. </p>
+
+
+<div class="alert alert-success" role="alert">
+<p>Results - Contrast Ratio  <i class="bi bi-hand-thumbs-up-fill"></i> After looking at the same pages as before we noticed that the color ratios for text offered excellent contrast. The white background had black font, the black background had white font, and the dark teal had white font as well. The choices made here make visibility for text a lot easier on the eyes. </p>
+</div>
+
+<div class="alert alert-success" role="alert">
+<p>Results - Resizing Text  <i class="bi bi-hand-thumbs-up-fill"></i>SCCLD's website does a great job of text resizability all the way to 200% on desktop and the Google Chrome app on Android phones while maintaining an aesthetically pleasing appearance.</p>
+</div>
+
+ <h3>Interaction:</h3>
+ <h4>Keyboard access and visual focus </h4>  
+ <p>Using a mouse may require motor function and capability that not everyone has. Therefore, keyboard access should be readily available and keyboard focus should be denoted clearly through either a border or highlight. </p>
+
+ <div class="alert alert-success" role="alert">
+<p>Results: <i class="bi bi-hand-thumbs-up-fill"></i> SCCLD's website is incredibly accessible via keyboard, allowing users to skip to either main navigation, search function, or content at the beginning of their options. Keyboard focus is also clearly denoted by an outline. Nice job!</p>
+</div>
+
+
+<h4>Forms, labels, and errors (including Search fields): </h4>
+Users are able to keyboard navigate to the different forms fields. 
+Each form control has a label element with a for attribute that matches the value of the id attribute in the related control. For example:
+<ul>
+    <li>Each form control has a <code>label</code> element with a <code>for</code> attribute that  matches the value of the <code>id</code> attribute in the related control. For example:<br>
+        <code>&lt;label for="firstname"&gt;First name: &lt;/label&gt;<br>
+        &lt;input type="text" name="firstname" id="firstname" /&gt;<br>
+        </code> </li>
+        <li>Each <code>id</code> is unique within the web page.</li>
+</ul>
+<div class="alert alert-success" role="alert">
+<p>Results <i class="bi bi-hand-thumbs-up-fill"></i> 
+    After testing the ask a librarian page, we were able to go to each form field and fill each one out using only the keyboard. Each form also had a unique id attached to it.</p>
+</div>
+
+
+ <h3>General:</h3>
+ <p>Moving, Flashing, or Blinking Content: Moving, flashing, or blinking content includes carousels (example carousel), ads, videos, auto-updating stock tickers, scrolling news feeds, and more. While all of this content may help fit more information into one portion of the screen, users must be able to control any content that moves. It is not just a minor annoyance to wait for a certain piece of content to come around, some users may have visual processing disorders that would make it incredibly difficult to navigate the page.</p>
+ 
+ <div class="alert alert-success" role="alert">
+ <p>Results: <i class="bi bi-hand-thumbs-up-fill"></i> The lone image carousel on the home page near the top of the page has controls to pause the carousel as well as go back to an image from before (the three dots below the images that actually also make it much easier to select each one instead of having to keep going right or left).</p>
+</div>
+
+ <p>Basic Structure Check: This basic check allows us to comprehend how some individual users will "view" the web page differently. In order to perform this check, we looked at the web page without images, styles, and layout. What we are left with is the barebones set up of the page and all of its links.</p>
+
+<div class="alert alert-danger" role="alert">
+<p>Results: <i class="bi bi-hand-thumbs-down-fill"></i> We used the Web Developer extension for Google chrome to turn off all images and CSS styles. The lack of alt text for 99% of images hinders the webpage in this way. The lack of a "main" as well made navigation more difficult in this format. However, all the headings line up with the pages that follow them, for example, all of the book pages fall under the book heading, so folks using a screen reader might not have too much trouble navigating the home page.</p>
+</div>
+ 
+
+<h3>In Summary</h3>
+<p>Thank you for taking the time to have a look at the discoveries we have made when taking a look at your page. If you have any follow up questions, please do not hesitate to reach out to orion.dam@du.edu. I believe that the majority, if not all, of the issues that were found can be resolved. I have attached a few potentially useful articles concerning web accessibility below. Thank you again!</p>
+
+ <h2>Related Articles:</h2>
+ <ul>
+<li><a href="https://www.w3.org/WAI/fundamentals/accessibility-intro/">W3C Web Accessibility Initiative (WAI)</a></li>
+<li><a href="https://www.w3.org/WAI/standards-guidelines/">W3C Accessibility Standards Overview</a></li>
+<li><a href="https://wave.webaim.org/">WAVE Web Accessibility Evaluation Tool</a></li>
+<li><a href="https://adata.org/ocr-videos">The U.S. Department of Education’s Office for Civil Rights – Video Series</a></li>
+<li><a href="https://www.w3.org/WAI/test-evaluate/">Evaluating Web Accessibility Overview</a></li>
+</ul>
+
+
+</div> 
+</body>
+</html>
