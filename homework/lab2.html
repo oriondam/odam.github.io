@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+
+    <script>
+    var xValues = ["2018", "2019", "2020", "2021", "2022"];
+    var yValues = [76, 68, 122, 24, 30];
+    var barColors = ["lavender", "thistle","violet","purple","indigo"];
+    
+    new Chart("myChart", {
+      type: "bar",
+      data: {
+        labels: xValues,
+        datasets: [{
+          backgroundColor: barColors,
+          data: yValues
+        }]
+      },
+      options: {
+        legend: {display: false},
+        title: {
+          display: true,
+          text: "Books Read Annually from 2018-2022"
+        }
+      }
+    });
+    </script>
+    
+</body>
+</html>
