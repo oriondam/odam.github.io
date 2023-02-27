@@ -35,6 +35,39 @@
       }
     });
     </script>
+
+    <p>
+        <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+
+        <script>
+        var xValues = ["I Like Academia", "Collaboration", "Useful Information", "Connections", "Because I Must In Order To Advance My Career and Be Fairly Compensated For Work I Already Do"];
+        var yValues = [2, 3, 10, 15, 70];
+        var barColors = [
+          "#c291db",
+          "#bc6ae6",
+          "#ad55d9",
+          "#68258a",
+          "#4a0e69"
+        ];
+        
+        new Chart("myChart", {
+          type: "pie",
+          data: {
+            labels: xValues,
+            datasets: [{
+              backgroundColor: barColors,
+              data: yValues
+            }]
+          },
+          options: {
+            title: {
+              display: true,
+              text: "Reasons I Am Pursuing My MLIS Degree"
+            }
+          }
+        });
+        </script>
+    </p>
     
 </body>
 </html>
